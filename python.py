@@ -64,7 +64,6 @@ class PythonMutator(ast.NodeTransformer, Mutator):
     def convert_to_neq(self, node):
         return ast.NotEq()
 
-
     def convert_to_increment(self, node: ast.Constant):
         return ast.Constant(value=node.value + 1)
 
